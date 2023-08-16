@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* Header */
+header{
+    text-align: center;
+    padding: 10px;
+    background-position: center;
+    background-image: url(''); /* creating the logo in aseprite */
+}
+
+/* Main */
+.container {
+    background-color: #EEE;
+    min-height: 80vh;
+}
+
+/* Footer */
