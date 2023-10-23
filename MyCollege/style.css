@@ -6,7 +6,7 @@
     overflow: auto;
 }
 
-/* Header */
+/*---------------------------- Header ----------------------------*/
 header{
     text-align: center;
     padding: 10px;
@@ -14,9 +14,9 @@ header{
     color: white;
 }
 
-/* Main */
+/*---------------------------- Main ----------------------------*/
 main {
-    background-color: #EEE;
+    background-color: #c1c1c1;
     padding: 20px;
     display: flex; 
     flex-direction: column; 
@@ -31,24 +31,33 @@ main {
 
 .card {
     width: 80px;
-    height: 80px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparência do fundo */
-    border-radius: 100px; 
+    border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s;
     margin: 10px;
     margin-bottom: 25px;
+    padding-top: 22px;
+    overflow: hidden;
 }
-.card:hover {
-    transform: scale(1.05); 
-}
+
 .card a{
     text-decoration: none;
     color: inherit;
 }
+.card p{
+    transform: translateY(5px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.card p:hover{
+    transform: translateY(0px);
+    opacity: 1;
+}
 
 .container{
-    margin-left: 33vw;
+    margin-left: 450px;
 }
 .container div{
     margin-top: 50px;
@@ -61,14 +70,16 @@ main {
 .informationCard{
     width: 50%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparência do fundo */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparência do fundo */
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: transform 0.3s;
     margin-bottom: 25px;
+    overflow: hidden;
 }
 
-/* Footer */
+
+/*---------------------------- Footer ----------------------------*/
 footer{
     font-style: italic; 
     text-align: center;
