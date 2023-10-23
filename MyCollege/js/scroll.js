@@ -7,8 +7,8 @@ function getDistanceFromTheTop(element){
 
 function scrollToSection(event){
     event.preventDefault();
-    const distanceFromTheTop = getDistanceFromTheTop(event.target) - 51;
-    smoothScrollTo(0, distanceFromTheTop, 650);
+    const distanceFromTheTop = getDistanceFromTheTop(event.target) - 30;
+    smoothScrollTo(0, distanceFromTheTop, 800);
 }
 
 cardLinks.forEach((link) => {
