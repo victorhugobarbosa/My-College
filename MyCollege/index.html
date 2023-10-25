@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>MyCollege</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/victorhugobarbosa/My-College/main/MyCollege/img/ctc.ico">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/victorhugobarbosa/My-College/main/MyCollege/img/ctc.ico">>
 </head>
 <body>
     <!------------------------------ Header ------------------------------>
     <header>
-        <h1>Technical College of Campinas</h1>
+        <h1>My College</h1>
     </header>
 
     <!------------------------------ Main ------------------------------>
@@ -19,15 +19,26 @@
         <img id="firstImg" src="img/header_img.jpg" alt="college photo">
 
         <div class="cards" style="display: flex;">
-            <div class="card">
-                <p><a href="#about">About</a></p>
-                <img src="img/about.png" alt="about_img">
+            <div class="card" onmouseenter="aparecerTexto('clickAbout', 'cardImg1')" onmouseleave="desaparecerTexto('clickAbout', 'cardImg1')">
+                <div id='cardImg1' class="cardImg"><img style="width: 60px;" src="img/aboutUs.png" alt="aboutUs"></div>
+                <p style="margin-top: 20px;" id="clickAbout">
+                    <a href="#about">About</a>
+                </p>
             </div>
             
-            <div class="card">
-                <p><a href="#objectives">Objective</a></p>
+            <div class="card" onmouseenter="aparecerTexto('clickObjective', 'cardImg2')" onmouseleave="desaparecerTexto('clickObjective', 'cardImg2')">
+                <div id='cardImg2' class="cardImg"><img style="width: 60px;" src="img/objectives.png" alt="objectives"></div>
+                <p style="padding-top: 3px;" id="clickObjective">
+                    <a href="#objectives">Objective</a>
+                </p>
             </div>
-            <div class="card"><p><a></a></p></div>
+            
+            <div class="card" onmouseenter="aparecerTexto('clickImagens', 'cardImg3')" onmouseleave="desaparecerTexto('clickImagens', 'cardImg3')">
+                <div id='cardImg3' class="cardImg"><img style="width: 60px;" src="img/imagens.png" alt="objectives"></div>
+                <p style="padding-top: 3px;" id="clickImagens">
+                    <a href="#imagens">Imagens</a>
+                </p>
+            </div>
         </div>
 
         <div class="container">
@@ -40,6 +51,7 @@
                     <br> <br>
                     The selection process at COTUCA includes the Affirmative Action and Social Inclusion Program - PAAIS. In 2019, 66% of the incoming students came from public schools.
                 </p>
+                <img src="img/ctcAntigo.jpg" alt="">
             </div>
 
             <div id="objectives" class="informationCard">
@@ -51,6 +63,11 @@
                     <br> <br>
                     Aware of its responsibility as a public and tuition-free school, COTUCA is committed to pursuing excellence in education through teaching methodologies, projects, and training of its teaching and administrative staff to better meet the demands of society.
                 </p>
+            </div>
+
+            <div id="imagens" class="informationCard">
+                <h1>Imagens</h1>
+
             </div>
         </div>
     </main>

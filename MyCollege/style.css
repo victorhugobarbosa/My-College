@@ -27,6 +27,7 @@ main {
 #firstImg {
     border-radius: 10px; 
     margin-bottom: 20px;
+    width: 1000px;
 }
 
 .card {
@@ -39,30 +40,18 @@ main {
     margin: 10px;
     margin-bottom: 25px;
     overflow: hidden;
+    font-family: 'Helvetica', sans-serif;
 }
 
 .card a{
-    text-decoration: none;
-    color: inherit;
+    color: rgb(214, 132, 9);
+    position: inherit;
+    font-size: 15px;
 }
-.card p{
-    padding-top: 22px;
-    transform: translateY(5px);
-    opacity: 0;
+.cardImg{
+    padding-top: 10px;
     transition: 0.5s;
 }
-.card p:hover{
-    transform: translateY(0px);
-    opacity: 1;
-}
-/*.card img{
-    width: 80px;
-    height: 80px;
-    transition: 0.5s;
-}
-.card img:hover{
-    transform: translateY(-80px);
-}*/
 
 .container{
     margin-left: 510px;
@@ -71,6 +60,7 @@ main {
     margin-top: 50px;
 }
 .container p {
+    font-weight: bold;
     padding: 20px;
     padding-top: 5px;
 }
@@ -85,8 +75,10 @@ main {
     margin-bottom: 25px;
     overflow: hidden;
 }
-
-
+.informationCard img{
+    width: 500px;
+    padding-bottom: 15px;
+}
 /*---------------------------- Footer ----------------------------*/
 footer{
     font-style: italic; 
