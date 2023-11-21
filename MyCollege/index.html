@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>MyCollege</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/victorhugobarbosa/My-College/main/MyCollege/img/ctc.ico">>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/victorhugobarbosa/My-College/main/MyCollege/img/ctc.ico">
 </head>
 <body>
     <!------------------------------ Header ------------------------------>
@@ -36,7 +36,7 @@
             <div class="card" onmouseenter="aparecerTexto('clickImagens', 'cardImg3')" onmouseleave="desaparecerTexto('clickImagens', 'cardImg3')">
                 <div id='cardImg3' class="cardImg"><img style="width: 60px;" src="img/imagens.png" alt="objectives"></div>
                 <p style="padding-top: 3px;" id="clickImagens">
-                    <a href="#imagens">Imagens</a>
+                    <a href="#images">Imagens</a>
                 </p>
             </div>
 
@@ -49,6 +49,7 @@
         </div>
 
         <div class="container">
+
             <div id="about" class="informationCard">
                 <h1>About the College</h1>
                 <p>
@@ -58,7 +59,7 @@
                     <br> <br>
                     The selection process at COTUCA includes the Affirmative Action and Social Inclusion Program - PAAIS. In 2019, 66% of the incoming students came from public schools.
                 </p>
-                <img src="img/ctcAntigo.jpg" alt="old classroom">
+                <img class="infoImage" src="img/ctcAntigo.jpg" alt="old classroom">
             </div>
 
             <div id="objectives" class="informationCard">
@@ -70,8 +71,29 @@
                     <br> <br>
                     Aware of its responsibility as a public and tuition-free school, COTUCA is committed to pursuing excellence in education through teaching methodologies, projects, and training of its teaching and administrative staff to better meet the demands of society.
                 </p>
-                <img src="img/cotucaAlunos.jpg" alt="cotuca students">
+                <img class="infoImage" src="img/cotucaAlunos.jpg" alt="cotuca students">
             </div>
+
+            <div id="images" class="informationCard">
+                <h1>Images</h1>
+                <p>
+                    Here are some images of the school, it's places and students:
+                </p>
+                <div style="display: flex; justify-content: space-between;">
+                    <button onclick="slideImage(-1)" class="slideButton">
+                        <
+                    </button>
+                    <div id="imageSlider">
+    
+                    </div>
+                    <button onclick="slideImage(1)" class="slideButton">
+                        >
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
     <!------------------------------ Footer ------------------------------>
@@ -84,6 +106,7 @@
     <script src="js/tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".informationCard"));
+        loadImages(11)
     </script>
 </body>
 </html>

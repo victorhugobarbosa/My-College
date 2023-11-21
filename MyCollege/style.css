@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: monospace;
     overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 /*---------------------------- Header ----------------------------*/
@@ -64,7 +69,7 @@ main {
 }
 
 .informationCard{
-    margin-left: 400px;
+    margin: auto;
     width: 50%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5); /* Transparência do fundo */
@@ -75,11 +80,28 @@ main {
     overflow: hidden;
 }
 
-.informationCard img{
+.infoImage{
     width: 450px;
     padding-bottom: 15px;
 }
 
+.slideButton{
+    width: 2%;
+}
+
+#imageSlider {
+    height: 500px;
+    width: 98%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    
+    position: absolute;
+    transition: 1s;
+}
 /*---------------------------- Footer ----------------------------*/
 footer{
     font-style: italic; 

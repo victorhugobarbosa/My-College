@@ -1,4 +1,4 @@
-var VanillaTilt = (function () {
+const VanillaTilt = (function () {
 'use strict';
 
 /**
@@ -9,7 +9,7 @@ var VanillaTilt = (function () {
  */
 
 class VanillaTilt {
-  constructor(element, settings = {}) {
+    constructor(element, settings = {}) {
     if (!(element instanceof Node)) {
       throw ("Can't initialize VanillaTilt because " + element + " is not a Node.");
     }
@@ -498,4 +498,4 @@ if (typeof document !== "undefined") {
 
 return VanillaTilt;
 
-}());
+}())

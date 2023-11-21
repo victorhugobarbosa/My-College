@@ -1,10 +1,10 @@
 function aparecerTexto(txt, img){
-    var texto = document.getElementById(txt)
-    var imagem = document.getElementById(img)
+    let texto = document.getElementById(txt)
+    let imagem = document.getElementById(img)
 
-    var id = setInterval(frame, 10);
-    var imgPos = 0;
-    var txtPos = 20;
+    let id = setInterval(frame, 10);
+    let imgPos = 0;
+    let txtPos = 20;
 
     function frame() {
         if (imgPos == -80) {
@@ -19,12 +19,12 @@ function aparecerTexto(txt, img){
 }
 
 function desaparecerTexto(txt, img){
-    var texto = document.getElementById(txt)
-    var imagem = document.getElementById(img)
+    let texto = document.getElementById(txt)
+    let imagem = document.getElementById(img)
 
-    var id = setInterval(frame, 10);
-    var imgPos = -80;
-    var txtPos = 36;
+    let id = setInterval(frame, 10);
+    let imgPos = -80;
+    let txtPos = 36;
 
     function frame() {
         if (imgPos == 0) {
@@ -38,11 +38,34 @@ function desaparecerTexto(txt, img){
     }
 }
 
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' +  counter).checked = true;
-    counter++;
-    if(counter > 11){
-        counter = 1;
+let showing = 0
+let totalImages = 0
+function loadImages(images)
+{
+    totalImages = images
+    
+    const slider = document.getElementById('imageSlider')
+    for (let image = 1;image <= images; image++) 
+    {
+        slider.innerHTML += `<img class="slide" src="img/slidesImgs/${image}.jpg">`
     }
-}, 5000);
+    const slides = document.querySelectorAll('.slide')
+    slides.forEach((slide, index) => {
+        slide.style.left = index*100 + "%"
+    })
+}
+
+function slideImage(direction)
+{
+    console.log("total images: "+ totalImages)
+
+    showing += direction>0? 1:-1
+    if (showing < 0) showing = 0
+    if (showing >= totalImages) showing = totalImages-1
+    console.log(showing)
+    
+    const slides = document.querySelectorAll('.slide')
+    slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${showing*100}%)`
+    })
+}
