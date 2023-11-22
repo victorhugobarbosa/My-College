@@ -90,17 +90,18 @@ main {
 }
 
 #imageSlider {
-    height: 500px;
+    height: 400px;
     width: 98%;
+    margin: 0%;
     overflow: hidden;
     position: relative;
 }
 
 .slide {
     width: 100%;
-    
-    position: absolute;
+    height: fit-content;
     transition: 1s;
+    position: absolute;
 }
 /*---------------------------- Footer ----------------------------*/
 footer{

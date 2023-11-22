@@ -57,12 +57,9 @@ function loadImages(images)
 
 function slideImage(direction)
 {
-    console.log("total images: "+ totalImages)
-
     showing += direction>0? 1:-1
     if (showing < 0) showing = 0
     if (showing >= totalImages) showing = totalImages-1
-    console.log(showing)
     
     const slides = document.querySelectorAll('.slide')
     slides.forEach((slide) => {
